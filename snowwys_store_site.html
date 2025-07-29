@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snowwy's Store</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0e0e0e;
+      color: white;
+    }
+    header {
+      background: linear-gradient(to right, #6a0dad, #3a0057);
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    nav {
+      background-color: #1a1a1a;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #b265ff;
+    }
+    .container {
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      background-color: #1f1f1f;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .product h2 {
+      color: #b265ff;
+      margin: 10px 0;
+    }
+    .product p {
+      margin: 5px 0;
+    }
+    .buy-button {
+      background-color: #6a0dad;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .buy-button:hover {
+      background-color: #8c2fff;
+    }
+    footer {
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Snowwy's Store</h1>
+    <p>Estilo, atitude e autenticidade</p>
+  </header>
+  <nav>
+    <a href="#">Início</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <div class="container" id="produtos">
+    <div class="product">
+      <img src="https://via.placeholder.com/300x300.png?text=Camiseta+Oversized" alt="Produto 1">
+      <h2>Camiseta Oversized</h2>
+      <p>R$ 59,90</p>
+      <button class="buy-button">Comprar</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/300x300.png?text=Moletom+Street" alt="Produto 2">
+      <h2>Moletom Street</h2>
+      <p>R$ 119,90</p>
+      <button class="buy-button">Comprar</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/300x300.png?text=Boné+Style" alt="Produto 3">
+      <h2>Boné Style</h2>
+      <p>R$ 39,90</p>
+      <button class="buy-button">Comprar</button>
+    </div>
+  </div>
+
+  <footer id="contato">
+    <p>© 2025 Snowwy's Store. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
