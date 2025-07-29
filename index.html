@@ -1,52 +1,181 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snowwy's Store</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0e0e0e;
-            color: #fff;
-        }
-        header {
-            background-color: #5e17eb;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        main {
-            padding: 30px;
-            text-align: center;
-        }
-        .produto {
-            background: #1c1c1c;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 400px;
-            box-shadow: 0 0 10px #5e17eb;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Snowwy's Store - Loja de Roupas</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #120022; /* preto roxo escuro */
+      color: #c8a2c8; /* roxo claro */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #2a005a; /* roxo mais forte */
+      padding: 1rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      text-shadow: 0 0 10px #9b30ff;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: #d9b3ff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f5e6ff;
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    main h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      text-shadow: 0 0 6px #a353ff;
+    }
+
+    /* Grid dos produtos */
+    .produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 2rem;
+    }
+
+    .produto {
+      background-color: #2f004f;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #7e3fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s ease;
+    }
+
+    .produto:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #bf8fff;
+    }
+
+    .produto img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .produto h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+      color: #dda0ff;
+    }
+
+    .produto p {
+      flex-grow: 1;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      color: #d4b3ff;
+    }
+
+    .produto .preco {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #f2d3ff;
+    }
+
+    footer {
+      background-color: #2a005a;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #d9b3ff;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.7);
+    }
+
+    /* Responsivo */
+    @media(max-width: 500px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      nav a {
+        margin: 0 8px;
+        font-size: 0.9rem;
+      }
+      main {
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Snowwy's Store</h1>
-        <p>Moda com atitude em roxo e preto 🖤💜</p>
-    </header>
-    <main>
-        <div class="produto">
-            <h2>Moletom Oversized</h2>
-            <p>Confortável, estiloso e perfeito para qualquer rolê!</p>
-        </div>
-        <div class="produto">
-            <h2>Camiseta Street</h2>
-            <p>Estampa exclusiva com toque suave e qualidade top.</p>
-        </div>
-    </main>
+
+<header>
+  <h1>Snowwy's Store</h1>
+  <nav>
+    <a href="#">Início</a>
+    <a href="#">Produtos</a>
+    <a href="#">Sobre</a>
+    <a href="#">Contato</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Roupas estilosas para você</h2>
+  <section class="produtos">
+    <article class="produto">
+      <img src="https://via.placeholder.com/250x300/9b30ff/fff?text=Camiseta+Roxa" alt="Camiseta Roxa" />
+      <h3>Camiseta Roxa</h3>
+      <p>Camiseta confortável com tecido macio na cor roxo vibrante.</p>
+      <div class="preco">R$ 59,90</div>
+    </article>
+
+    <article class="produto">
+      <img src="https://via.placeholder.com/250x300/4b0082/fff?text=Moletom+Preto" alt="Moletom Preto" />
+      <h3>Moletom Preto</h3>
+      <p>Moletom estiloso preto com detalhes roxos para dias frios.</p>
+      <div class="preco">R$ 129,90</div>
+    </article>
+
+    <article class="produto">
+      <img src="https://via.placeholder.com/250x300/800080/fff?text=Calça+Jogger" alt="Calça Jogger" />
+      <h3>Calça Jogger</h3>
+      <p>Calça jogger roxa, perfeita para looks descolados e confortáveis.</p>
+      <div class="preco">R$ 89,90</div>
+    </article>
+  </section>
+</main>
+
+<footer>
+  © 2025 Snowwy's Store. Todos os direitos reservados.
+</footer>
+
 </body>
 </html>
